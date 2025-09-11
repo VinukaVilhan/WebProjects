@@ -1,0 +1,241 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Remove background-image properties since we're using video */
+}
+
+/* Background video styling */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Favicon container - centered */
+.favicon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.favicon-container:hover {
+  transform: scale(1.02);
+}
+
+.favicon-image {
+  transition: opacity 0.3s ease;
+}
+
+/* Radio container - top right, aligned with navbar */
+.radio-container {
+  position: absolute;
+  top: 50px; /* Align with navbar - adjust based on your navbar height */
+  right: 50px; /* Match navbar right margin */
+  z-index: 999; /* Just below navbar z-index */
+}
+
+.radio-image {
+  /* No transitions or hover effects */
+}
+
+/* Dancer container - bottom right */
+.dancer-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+.dancer-image {
+  /* No transitions or hover effects */
+}
+
+/* Ripple canvas styling */
+.hero-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+}
+
+.intro-section {
+  position: relative;
+  z-index: 10;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro-image-section {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+}
+
+/* Optional overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* WebGL container for favicon ripple effect */
+#favicon-webgl-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.favicon-curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.favicon-curtain img {
+  display: none;
+}
+
+/* Fallback for WebGL not supported or video not supported */
+.webgl-fallback .hero-section,
+.video-fallback .hero-section {
+  background-image: url('/assets/Main-BG.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.webgl-fallback .hero-ripple,
+.video-fallback .hero-video {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-ripple {
+    image-rendering: pixelated;
+  }
+  
+  .favicon-container {
+    transform: scale(0.8);
+  }
+  
+  .dancer-container {
+    bottom: 10px;
+    right: 10px;
+    transform: scale(0.7);
+  }
+  
+  /* Radio positioning for mobile */
+  .radio-container {
+    top: 80px; /* Account for mobile navbar height */
+    right: 20px;
+    transform: scale(0.8);
+  }
+
+  /* Video optimization for mobile */
+  .hero-video {
+    object-fit: cover;
+    /* Consider reducing quality or using different video for mobile */
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .favicon-container {
+    transform: scale(0.6);
+  }
+  
+  .dancer-container {
+    bottom: 5px;
+    right: 5px;
+    transform: scale(0.5);
+  }
+  
+  .radio-container {
+    top: 70px;
+    right: 15px;
+    transform: scale(0.7);
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .favicon-container {
+    transform: scale(0.9);
+  }
+  
+  .dancer-container {
+    bottom: 15px;
+    right: 15px;
+    transform: scale(0.8);
+  }
+  
+  .radio-container {
+    top: 45px;
+    right: 35px;
+    transform: scale(0.9);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .dancer-container {
+    bottom: 40px;
+    right: 40px;
+  }
+  
+  .radio-container {
+    top: 60px;
+    right: 60px;
+  }
+}
+
+/* Performance optimization for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hero-ripple {
+    display: none;
+  }
+  
+  .hero-video {
+    /* Pause video or use static frame for users who prefer reduced motion */
+    animation-play-state: paused;
+  }
+  
+  .favicon-container,
+  .favicon-image {
+    transition: none;
+  }
+  
+  .favicon-container:hover {
+    transform: none;
+  }
+}
