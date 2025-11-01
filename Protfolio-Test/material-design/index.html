@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyGrid Drones — Aerial Services for Business</title>
+  <meta name="description" content="Professional drone services for inspection, mapping, media, and delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%9A%81%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="md-appbar elevation-4">
+    <div class="container appbar-row">
+      <a class="brand" href="#top" aria-label="SkyGrid Drones home">
+        <span class="material-symbols-outlined" aria-hidden="true">quad</span>
+        <span class="brand-text">SkyGrid Drones</span>
+      </a>
+      <nav class="nav">
+        <a href="#services" class="md-link">Services</a>
+        <a href="#industries" class="md-link">Industries</a>
+        <a href="#contact" class="md-link">Contact</a>
+        <button class="md-button md-button--filled" id="quoteBtn" type="button">Get a quote</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy elevation-2 md-surface">
+          <h1>Elevate your operations with pro drone services</h1>
+          <p>Inspection, surveying, media, and delivery—safe, compliant, and on schedule.</p>
+          <div class="cta-row">
+            <a href="#services" class="md-button md-button--filled" data-ripple>View services</a>
+            <a href="#contact" class="md-button md-button--outlined" data-ripple>Book a demo</a>
+          </div>
+          <ul class="hero-metrics">
+            <li><strong>500+</strong> missions</li>
+            <li><strong>99.9%</strong> on-time</li>
+            <li><strong>120m</strong> AGL certified</li>
+          </ul>
+        </div>
+        <div class="hero-art elevation-2 md-surface" aria-hidden="true">
+          <div class="drone-illustration">
+            <div class="drone-body">🚁</div>
+            <div class="prop prop-1"></div>
+            <div class="prop prop-2"></div>
+            <div class="prop prop-3"></div>
+            <div class="prop prop-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="card-grid">
+          <article class="md-card elevation-1">
+            <div class="md-card__header">
+              <span class="material-symbols-outlined" aria-hidden="true">route</span>
+              <h3>Survey & Mapping</h3>
+            </div>
+            <p>Orthomosaics, DSM/DTM, and volumetrics with centimeter‑grade accuracy.</p>
+            <button class="md-button md-button--text" data-ripple>Learn more</button>
+          </article>
+          <article class="md-card elevation-1">
+            <div class="md-card__header">
+              <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+              <h3>Asset Inspection</h3>
+            </div>
+            <p>High‑resolution visual and thermal inspections for utilities and infrastructure.</p>
+            <button class="md-button md-button--text" data-ripple>Learn more</button>
+          </article>
+          <article class="md-card elevation-1">
+            <div class="md-card__header">
+              <span class="material-symbols-outlined" aria-hidden="true">movie</span>
+              <h3>Media Production</h3>
+            </div>
+            <p>Cinematic aerial photo/video with licensed pilots and post‑production.</p>
+            <button class="md-button md-button--text" data-ripple>Learn more</button>
+          </article>
+          <article class="md-card elevation-1">
+            <div class="md-card__header">
+              <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
+              <h3>Last‑mile Delivery</h3>
+            </div>
+            <p>Secure, trackable payload delivery with geofencing and redundancy.</p>
+            <button class="md-button md-button--text" data-ripple>Learn more</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="section md-surface">
+      <div class="container">
+        <h2 class="section-title">Industries</h2>
+        <div class="chips">
+          <span class="md-chip" data-ripple>Construction</span>
+          <span class="md-chip" data-ripple>Energy</span>
+          <span class="md-chip" data-ripple>Agriculture</span>
+          <span class="md-chip" data-ripple>Public Safety</span>
+          <span class="md-chip" data-ripple>Logistics</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <form class="md-card elevation-1 contact-form" aria-labelledby="contactTitle">
+          <h3 id="contactTitle">Request a quote</h3>
+          <label class="md-field">
+            <span>Company</span>
+            <input type="text" required placeholder="Your company name">
+          </label>
+          <label class="md-field">
+            <span>Email</span>
+            <input type="email" required placeholder="you@company.com">
+          </label>
+          <label class="md-field">
+            <span>Service</span>
+            <select required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Survey & Mapping</option>
+              <option>Asset Inspection</option>
+              <option>Media Production</option>
+              <option>Last‑mile Delivery</option>
+            </select>
+          </label>
+          <label class="md-field">
+            <span>Details</span>
+            <textarea rows="4" placeholder="Tell us about your project"></textarea>
+          </label>
+          <button class="md-button md-button--filled" type="submit" data-ripple>Send request</button>
+        </form>
+        <div class="md-card elevation-1 contact-aside">
+          <h3>Compliance & Safety</h3>
+          <ul>
+            <li>Licensed pilots (Part 107)</li>
+            <li>Redundant platforms and BVLOS capable</li>
+            <li>Airspace authorization management</li>
+            <li>Insured operations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer md-surface">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> SkyGrid Drones</span>
+      <a class="md-link" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

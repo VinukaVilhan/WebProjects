@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Stack — Neo-Brut Dessert Shop</title>
+  <meta name="description" content="Neo-brutalist dessert shop landing page: bold sweets, bold flavors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🍰%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="nb-shell nb-surface">
+    <div class="container header-grid">
+      <a class="logo nb-card" href="#top" aria-label="Sweet Stack home">
+        <span class="logo-emoji" aria-hidden="true">🍰</span>
+        <span class="logo-text">Sweet Stack</span>
+      </a>
+      <nav class="nav">
+        <a href="#menu" class="nb-link">Menu</a>
+        <a href="#about" class="nb-link">About</a>
+        <a href="#visit" class="nb-link">Visit</a>
+        <button id="themeToggle" class="nb-button" type="button" aria-pressed="false">Toggle Theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero nb-shell nb-surface">
+      <div class="container hero-grid">
+        <div class="hero-copy nb-card">
+          <h1 class="title">Bold Sweets, Bold Flavors.</h1>
+          <p class="subtitle">Neo‑brutalist desserts crafted fresh daily. Chunky borders. Chunkier cookies.</p>
+          <div class="cta-row">
+            <a href="#menu" class="nb-button nb-button--primary">Explore Menu</a>
+            <a href="#visit" class="nb-button nb-button--ghost">Visit Us</a>
+          </div>
+          <ul class="badges">
+            <li class="nb-chip">100% Butter</li>
+            <li class="nb-chip">No Artificial Colors</li>
+            <li class="nb-chip">Locally Roasted Coffee</li>
+          </ul>
+        </div>
+        <div class="hero-art nb-card" aria-hidden="true">
+          <div class="stack">
+            <div class="slab slab--strawberry">🍓</div>
+            <div class="slab slab--lemon">🍋</div>
+            <div class="slab slab--choco">🍫</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu nb-shell">
+      <div class="container">
+        <h2 class="section-title nb-underline">Menu Highlights</h2>
+        <div class="grid cards">
+          <article class="card nb-card">
+            <div class="card-media">🍪</div>
+            <h3 class="card-title">Chunky Choc Chip</h3>
+            <p class="card-text">Crisp edges, gooey middle, serious chips. A classic, uncompromising.</p>
+            <button class="nb-button nb-button--primary">Order</button>
+          </article>
+          <article class="card nb-card">
+            <div class="card-media">🧁</div>
+            <h3 class="card-title">Vanilla Sky Cupcake</h3>
+            <p class="card-text">Tall frosting, real vanilla, cloud‑level fluff. No sprinkles required.</p>
+            <button class="nb-button nb-button--primary">Order</button>
+          </article>
+          <article class="card nb-card">
+            <div class="card-media">🍩</div>
+            <h3 class="card-title">Neo Glaze Donut</h3>
+            <p class="card-text">Angular glaze, soft crumb. Looks sharp, tastes softer.</p>
+            <button class="nb-button nb-button--primary">Order</button>
+          </article>
+          <article class="card nb-card">
+            <div class="card-media">🍨</div>
+            <h3 class="card-title">Brutal Sundae</h3>
+            <p class="card-text">Three slabs of ice cream, cookie rubble, hot fudge geometry.</p>
+            <button class="nb-button nb-button--primary">Order</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about nb-shell nb-surface">
+      <div class="container about-grid">
+        <div class="about-copy nb-card">
+          <h2 class="section-title nb-underline">About Sweet Stack</h2>
+          <p>We bake with loud flavors and louder visuals. Our neo‑brutalism is more than a look—it’s a promise: direct, honest, and built with quality.</p>
+          <ul class="list">
+            <li>Daily small‑batch baking</li>
+            <li>Transparent ingredients</li>
+            <li>Community‑first sourcing</li>
+          </ul>
+        </div>
+        <div class="about-promo nb-card">
+          <h3>Weekly Drop</h3>
+          <p>Every Friday at 12:00—limited edition slab cakes. First come, first served.</p>
+          <a href="#menu" class="nb-button nb-button--ghost">Set Reminder</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="visit nb-shell">
+      <div class="container visit-grid">
+        <div class="visit-card nb-card">
+          <h2 class="section-title">Visit Us</h2>
+          <p>123 Bold Ave, Unit B<br>Design City, DC 12345</p>
+          <p>Open Daily: 8:00 — 18:00</p>
+          <a class="nb-button nb-button--primary" href="https://maps.google.com" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <form class="newsletter nb-card" aria-labelledby="newsletterTitle">
+          <h3 id="newsletterTitle">Get Sweet News</h3>
+          <label class="sr-only" for="email">Email</label>
+          <div class="input-row">
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <button class="nb-button nb-button--primary" type="submit">Subscribe</button>
+          </div>
+          <p class="form-note">No spam. Just drops and deals.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer nb-shell nb-surface">
+    <div class="container footer-grid">
+      <div class="nb-card">
+        <strong>Sweet Stack</strong>
+        <p>Built loud. Baked fresh.</p>
+      </div>
+      <div class="nb-card social">
+        <a class="nb-link" href="#">Instagram</a>
+        <a class="nb-link" href="#">TikTok</a>
+        <a class="nb-link" href="#">Threads</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
