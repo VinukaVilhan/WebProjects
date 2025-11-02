@@ -1,3 +1,22 @@
+html {
+  scroll-behavior: auto; /* Never use smooth with ScrollTrigger */
+}
+
+.horizontal-scroll-wrapper,
+.horizontal-scroll-wrapper *,
+.Locations-Section,
+.Locations-Section *,
+.location-card {
+  transition: none !important;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -166,6 +185,13 @@
     object-fit: cover;
     /* Consider reducing quality or using different video for mobile */
   }
+
+  /* Location card city names on mobile */
+  .location-card h2 {
+    font-size: 48px;
+    top: 20px;
+    left: 20px;
+  }
 }
 
 /* Small mobile */
@@ -184,6 +210,13 @@
     top: 70px;
     right: 15px;
     transform: scale(0.7);
+  }
+
+  /* Location card city names on small mobile */
+  .location-card h2 {
+    font-size: 36px;
+    top: 15px;
+    left: 15px;
   }
 }
 
@@ -238,4 +271,116 @@
   .favicon-container:hover {
     transform: none;
   }
+}
+
+/* Horizontal Scroll Wrapper - this is what gets pinned */
+.horizontal-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* Remove any default margins/padding that might cause jumps */
+  margin: 0;
+  padding: 0;
+}
+
+/* Locations Section */
+.Locations-Section {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: 100vh;
+  will-change: transform;
+  /* Ensure smooth transforms */
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.location-card {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  padding: 40px;
+  position: relative;
+  /* GPU acceleration for smoother scrolling */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.location-card h2 {
+  font-family: 'CooperHewitt-Heavy', sans-serif;
+  font-size: 120px;
+  font-weight: 900;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #000;
+  line-height: 1;
+  z-index: 2;
+}
+
+.location-card:nth-child(1) {
+  background: white;
+}
+
+.location-card:nth-child(2) {
+  background: #ddeadd;
+}
+
+.location-card:nth-child(3) {
+  background: #c3dbf5;
+}
+
+.location-card:nth-child(4) {
+  background: white;
+}
+
+.jaffna-image {
+  position: absolute;
+  right: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50% !important;
+  height: 80% !important;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Image Section - Add buffer space */
+.Image-Section {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  /* Ensure it starts fresh without any lingering transforms */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  /* Add a small margin-top to create breathing room */
+  margin-top: 0;
+}
+
+.Image-Section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Fix for ScrollTrigger pin spacer to prevent jumps */
+.pin-spacer {
+  display: block !important;
 }

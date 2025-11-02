@@ -246,8 +246,9 @@
     }
 }
 
-/* Smooth animations for all screen changes */
-* {
+.nav-link,
+.hamburger span,
+.nav-menu {
     transition: all 0.3s ease;
 }
 
